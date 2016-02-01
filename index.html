@@ -3,28 +3,35 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Net In Sites: Home</title>
+
+	<link rel="shortcut icon" href="assets/images/favicon.ico" />
+
 	<link rel="stylesheet" href="assets/css/normalize.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Hind' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
 
 	<header>
-		<div class="header">
-			<a href="index.html"><img src="assets/images/logo.png" alt="logo"></a>
-			<a href="" id="hamburger"><i class="fa fa-bars fa-3x"></i></a>		
+		<div class="topDesktop">
+			<div class="header">
+				<a href="index.html"><img src="assets/images/logo.png" alt="logo"></a>
+				<a href="" id="hamburger"><i class="fa fa-bars fa-2x"></i></a>
+			</div>
+			<nav class="nav hidden">
+				<ul>
+					<li><a href="#ourWork">Our Work</a></li>
+					<li><a href="#services">Services</a></li>
+					<li><a href="#blog">Blog</a></li>
+					<li><a href="#contact">Contact Us</a></li>
+				</ul>
+			</nav>
 		</div>
-		<nav class="nav">
-			<ul>
-				<li><a href="#ourWork">Our Work</a></li>
-				<li><a href="#services">Services</a></li>
-				<li><a href="#blog">Blog</a></li>
-				<li><a href="#contact">Contact Us</a></li>
-			</ul>
-		</nav>
 		<div class="image-slider" id="ourWork">
-			<i class="fa fa-arrow-circle-left fa-2x" id="leftArrow"></i>
-			<i class="fa fa-arrow-circle-right fa-2x" id="rightArrow"></i>
+			<i class="fa fa-arrow-left fa-2x" id="leftArrow"></i>
+			<i class="fa fa-arrow-right fa-2x" id="rightArrow"></i>
 			<div class="images">
 				<img src="assets/images/image1.jpg" class="current">
 				<img src="assets/images/image2.jpg" class="">
@@ -49,10 +56,14 @@
 		</div>
 		<div class="blog" id="blog">
 			<h1>Our Blog</h1>
-			<h2>What's important in 2016?</h2>
-			<p>We ran a small survey to see what people thought were the most important aspects of how a Website is put together. The results were interesting...<br /><a href="">Read the full post</a></p>
-			<h2>How do you write for mobile?</h2>
-			<p>Mobile apps and mobile Web usage now account for over 60% of all digital media consumption and that news is over a year old! If that's the case shouldn't we be spending more time considering how content looks on mobile?<br /><a href="">Read the full post</a></p>
+			<div class="blogPosts">
+				<h2>What's important in 2016?</h2>
+				<p>We ran a small survey to see what people thought were the most important aspects of how a Website is put together. The results were interesting... <a href=""><span>Read the full post</span></a></p>
+			</div>
+			<div class="blogPosts">
+				<h2>How do you write for mobile?</h2>
+				<p>Mobile apps and mobile Web usage now account for over 60% of all digital media consumption and that news is over a year old! If that's the case shouldn't we be spending more time considering how content looks on mobile? <a href=""><span>Read the full post</span></a></p>
+			</div>
 		</div>
 	</main>
 
@@ -83,6 +94,7 @@
 				<li><a href="#contact">Contact Us</a></li>
 			</ul>
 		</div>
+		<p id="copyright">&copy 2016 NetInSites</p>
 	</footer>
 
 <script type="text/javascript" src="assets/js/script.js"></script>

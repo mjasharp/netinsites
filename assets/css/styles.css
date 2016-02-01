@@ -1,7 +1,7 @@
 /*All devices and mobile phone*/
 
 body{
-	font-family: Verdana, helvetica, arial, sans-serif;
+	font-family: 'Hind', sans-serif;
 	color: #eee;
 	display: flex;
 	flex-direction: column;
@@ -25,9 +25,6 @@ a{
 	text-decoration: none;
 	color: orange;
 }
-.hidden{
-	display: none;
-}
 
 
 /*------HEADER------*/
@@ -43,15 +40,20 @@ a{
 #hamburger{
 	flex: 1 0 5%;
 }
-
+nav{
+	height: 11.7em;
+	transition: all ease 0.3s;
+}
 nav ul{
 	padding: 0 0.5em;	
+
 }
 nav ul li{
 	list-style: none;
 	padding: 0.5em 0;
 	margin-top: 0.2em;
 	text-align: center;
+	border-radius: 0.2em;
 
 background: #4B79A1; /* fallback for old browsers */
 background: -webkit-linear-gradient(to left, #283E51 , #4B79A1); /* Chrome 10-25, Safari 5.1-6 */
@@ -60,10 +62,17 @@ background: linear-gradient(to left, #283E51 , #4B79A1); /* W3C, IE 10+/ Edge, F
 nav ul li a, .footer ul li a{
 	color: #eee;
 }
+
+nav ul li:hover{
+	nav ul li a{
+		color: orange;
+	}
+}
+
 nav ul li a:hover{
 	text-shadow: 0 0 thin white;
 	color: orange;
-	transition: all ease 0.1s;
+	transition: all ease 0.2s;
 }
 .image-slider{
 	width: 100vw;
@@ -80,16 +89,16 @@ nav ul li a:hover{
 	position: absolute;
 	z-index: 50;
 }
-.fa-arrow-circle-left{
-	left:.2em;
+.fa-arrow-left{
+	left:.1em;
 	color: rgba(255,153,0,0.5);
 	position: absolute;
 	top: 50%;
 	transform: translateY(-50%);
 	z-index: 100;
 }
-.fa-arrow-circle-right{
-	right:.2em;
+.fa-arrow-right{
+	right:.1em;
 	color: rgba(255,153,0,0.5);
 	position: absolute;
 	top: 50%;
@@ -103,16 +112,23 @@ nav ul li a:hover{
 /*------MAIN------*/
 
 h1{
+	font-family: 'Montserrat', sans-serif;
 	font-size: 1.8em;
 	text-align: center;
 }
 h2{
+	font-family: 'Montserrat', sans-serif;
 	font-size: 1.2em;
 	padding: 0;
+	margin: 0;
 }
 p{
 	font-size: 0.8em;
 	padding: 0;
+	margin-top: 0;
+}
+p a{
+	font-style: italic;
 }
 
 .services{
@@ -134,15 +150,19 @@ p{
 }
 .fa-comments{
 	color: powderblue;
+	width: 1em;
 }
 .fa-shopping-cart{
 	color: greenyellow;
+	width: 1em;
 }
 .fa-files-o{
 	color: orangered;
+	width: 1em;
 }
 .fa-bar-chart{
 	color: palegreen;
+	width: 1em;
 }
 
 
@@ -161,7 +181,6 @@ form fieldset{
 	align-items: center;
 	justify-content: center;
 	padding: 0.2em;
-	display: flex;
 }
 .formInputRow label{
 	flex: 1 0 20%;
@@ -180,6 +199,7 @@ form fieldset{
 	display: flex;
 	align-items: center;
 	justify-content: space-around;
+	padding: 0;
 }
 .footer ul li{
 	list-style: none;
@@ -188,8 +208,19 @@ form fieldset{
 .footer ul li a:hover{
 	text-shadow: 0 0 thin white;
 	color: orange;
-	transition: all ease 0.1s;
+	transition: all ease 0.2s;
 }
+#copyright{
+	text-align: center;
+	margin-bottom: 0;
+}
+
+span:hover{
+	color: white;
+	transition: all ease 0.2s;
+}
+
+
 
 
 
@@ -199,11 +230,92 @@ form fieldset{
 /*for tablet - inclusive*/
 @media only screen and (min-width : 44em) {
 
+	nav{
+		height: 6.4em;
+	}
+	nav ul{
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		align-items: flex-start;
+		justify-content: space-around;
+	}
+	nav ul li{
+		margin: 0.2em;
+		flex: 1 0 40%;
+	}
+	.preamble{
+		margin: 0.5em;
+	}
+	.services h1{
+		flex: 1 0 100%;
+	}
+	.services a{
+		flex: 1 0 50%;
+	}
+	.blog{
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		align-items: flex-start;
+		justify-content: space-around;
+	}
+	.blog h1{
+		flex: 1 0 100%;
+	}
+	.blogPosts{
+		margin: 0.5em;
+		flex: 1 0 40%;
+	}
+	.contactForm, .footer{
+		max-width: 44em;
+		margin: auto;
+	}
+
 }
 
 
 
+
+
+/*so hamburger nav works only on table and phone*/
+@media only screen and (max-width : 63.99999999em){
+	.hidden{
+		height: 0;
+	}
+}
+
 /*for destop - inclusive*/
 @media only screen and (min-width : 64em) {
+
+	body{
+		max-width: 80em;
+		margin: auto;
+	}
+	#hamburger{
+		display: none;
+	}
+	
+	nav ul{
+		max-width: 70%;
+	}
+	nav ul li{
+		flex: 1 0 20%;
+	}
+	.image-slider{
+		max-width: 80em;
+		max-height: 48em;
+	}
+	.services a{
+		flex: 1 0 20%;
+	}
+	.topDesktop{
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+	}
+	nav{
+		flex: 1 0 55%;
+	}
 
 }

@@ -1,11 +1,11 @@
 window.onload = function(){
 	// everything goes in here
 
-	var hamburger = document,querySelector(".fa-bars");
+	var hamburger = document.querySelector("#hamburger");
 	var nav = document.querySelector(".nav");
 
-	var leftArrow = document.querySelector(".fa-arrow-circle-left");
-	var rightArrow = document.querySelector(".fa-arrow-circle-right");
+	var leftArrow = document.querySelector(".fa-arrow-left");
+	var rightArrow = document.querySelector(".fa-arrow-right");
 	var images = document.querySelector(".images");
 
 	rightArrow.addEventListener("click", function(){
@@ -30,7 +30,9 @@ window.onload = function(){
 		};
 	});
 
-	hamburger.addEventListener("click", function(){
-		nav.className = "";
+	hamburger.addEventListener("click", function(e){
+		e.preventDefault();
+		nav.classList.toggle("hidden");
 	});
+
 };
